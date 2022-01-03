@@ -1,4 +1,4 @@
-from ExternalApi import ExternalApi
+from sources.ExternalApi import ExternalApi
 import os
 from dotenv import load_dotenv
 load_dotenv()
