@@ -1,0 +1,1 @@
+https://mailtrap.io/blog/sending-emails-in-python-tutorial-with-code-examples/#Sending-an-email-using-SMTP
