@@ -1,5 +1,8 @@
-from sources.Covid import Covid
+from Email import Email
+from Newsletter import Newsletter
 
-covid = Covid().getLatestData()
+newsletter = Newsletter()
+text = newsletter.createTextMessage()
+html = newsletter.createHTMLMessage()
 
-print(covid)
+Email(text, html).sendEmail()

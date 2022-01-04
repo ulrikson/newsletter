@@ -22,8 +22,6 @@ class Email:
             server.login(os.getenv("EMAIL_LOGIN"), os.getenv("EMAIL_PASSWORD"))
             server.sendmail(self.sender, self.receiver, message.as_string())
 
-        print("Sent")
-
     def createMessage(self):
         message = MIMEMultipart("alternative")
         message["Subject"] = self.subject
@@ -36,6 +34,3 @@ class Email:
         message.attach(part2)
 
         return message
-
-
-Email("HEJ", "<html><body><a>HEJ</a></body></html>").sendEmail()
