@@ -15,7 +15,7 @@ class Email:
         self.text = text
         self.html = html
 
-    def sendEmail(self):
+    def send(self):
         message = self.createMessage()
 
         with smtplib.SMTP(os.getenv("EMAIL_SERVER"), os.getenv("EMAIL_PORT")) as server:

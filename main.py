@@ -5,4 +5,4 @@ newsletter = Newsletter()
 text = newsletter.createTextMessage()
 html = newsletter.createHTMLMessage()
 
-Email(text, html).sendEmail()
+Email(text, html).send()
