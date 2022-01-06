@@ -2,7 +2,6 @@ from Email import Email
 from Newsletter import Newsletter
 
 newsletter = Newsletter()
-text = newsletter.createTextMessage()
-html = newsletter.createHTMLMessage()
+content = newsletter.createHTMLMessage()
 
-Email(text, html).send()
+Email(content).sendViaMailtrap()
