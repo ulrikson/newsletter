@@ -4,4 +4,4 @@ from Newsletter import Newsletter
 newsletter = Newsletter()
 content = newsletter.createHTMLMessage()
 
-Email(content).sendViaMailtrap()
+Email(content).send()

@@ -9,7 +9,6 @@ class Newsletter:
         html = f"""\
                 <html>
                     <body>
-                        <h1 style="font-weight: bold">Tjosvejs!</h1>
                         <h2>Dagens covidnytt</h2>
                         <p>{self.covid["critical"]} på IVA, {self.covid["deaths"]} döda och {self.covid["confirmed"]} bekräftade</p>
                     </body>
