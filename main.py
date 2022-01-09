@@ -1,5 +1,5 @@
-from Email import Email
-from Newsletter import Newsletter
+from messaging.Email import Email
+from messaging.Newsletter import Newsletter
 
 newsletter = Newsletter()
 content = newsletter.createHTMLMessage()

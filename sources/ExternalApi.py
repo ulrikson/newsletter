@@ -2,7 +2,7 @@ import requests
 
 
 class ExternalApi:
-    def __init__(self, url, headers, params):
+    def __init__(self, url, headers = {}, params = {}):
         self.url = url
         self.headers = headers
         self.params = params
