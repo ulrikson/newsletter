@@ -5,5 +5,5 @@ newsletter = Newsletter()
 content = newsletter.createHTMLMessage()
 
 # print(content)
-
-Email(content).send()
+# Email(content).sendViaMailtrap()
+# Email(content).send()
