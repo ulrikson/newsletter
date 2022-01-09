@@ -1,4 +1,4 @@
-from ExternalApi import ExternalApi
+from sources.ExternalApi import ExternalApi
 
 import json
 
@@ -16,7 +16,3 @@ class Omni(ExternalApi):
         topicsText = ", ".join(topicsList)
 
         return topicsText
-
-print(
-    Omni().getPopularTopics()
-)
