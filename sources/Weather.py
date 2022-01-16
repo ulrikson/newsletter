@@ -27,7 +27,7 @@ class Weather(ExternalApi):
             html = html + text
 
         smhiUrl = f"https://www.smhi.se/q/{self.city}"
-        link = f"<p><a url={smhiUrl}>Mer info</p></a>"
+        link = f"<p><a href={smhiUrl}>Mer info</p></a>"
 
         html = html + link
 

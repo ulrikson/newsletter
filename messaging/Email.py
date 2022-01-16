@@ -13,7 +13,7 @@ load_dotenv()
 
 class Email:
     def __init__(self, html):
-        self.subject = "Goooob morning!"
+        self.subject = "Morning brief!"
         self.sender = "erik.ulrikson@gmail.com"
         self.receiver = "erik.ulrikson@gmail.com"
         self.html = html
