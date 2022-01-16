@@ -1,7 +1,9 @@
 from sources.ExternalApi import ExternalApi
 import os
 from dotenv import load_dotenv
+
 load_dotenv()
+
 
 class Weather(ExternalApi):
     def __init__(self, city, days):
@@ -14,7 +16,18 @@ class Weather(ExternalApi):
             "days": self.days,
         }
         self.headers = {}
-    
+
+    def getHtml(self):
+        forecasts = self.getForecast()
+
+        html = "<h2>Väder</h2>"
+
+        for day in forecasts:
+            text = f"<p>{day['date']}: {day['text']}, {day['avg_temp']} grader och {day['precipitation']} mm nederbörd"
+            html = html + text
+
+        return html
+
     def getForecast(self):
         content = ExternalApi(self.url, self.headers, self.params).getJson()
 
@@ -26,22 +39,8 @@ class Weather(ExternalApi):
             totalPrecipitation = forecast["day"]["totalprecip_mm"]
             condition = forecast["day"]["condition"]["text"]
 
-            forecasts.append({
-                "date": date,
-                "avg_temp": avgTemp,
-                "precipitation": totalPrecipitation,
-                "text": condition
-            })
+            forecasts.append(
+                {"date": date, "avg_temp": avgTemp, "precipitation": totalPrecipitation, "text": condition}
+            )
 
         return forecasts
-    
-    def getForecastHtml(self):
-        forecasts = self.getForecast()
-
-        html = "<h2>Väder</h2>"
-
-        for day in forecasts:
-            text = f"<p>{day['date']}: {day['text']}, {day['avg_temp']} grader och {day['precipitation']} mm nederbörd"
-            html = html + text
-
-        return html

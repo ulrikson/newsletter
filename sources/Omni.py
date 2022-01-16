@@ -7,6 +7,11 @@ class Omni(ExternalApi):
     def __init__(self):
         pass
 
+    def getHtml(self):
+        html = "<h2>Populärt på Omni</h2>" + f"<p>{self.getPopularTopics()}</p>"
+
+        return html
+
     def getPopularTopics(self):
         url = "https://omni-content.omni.news/topics?offset=0&limit=5&sort=current"
         content = ExternalApi(url).getJson()
