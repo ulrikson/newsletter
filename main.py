@@ -4,6 +4,6 @@ from messaging.Newsletter import Newsletter
 newsletter = Newsletter()
 content = newsletter.createHTMLMessage()
 
-print(content)
-Email(content).sendViaMailtrap()
-# Email(content).send()
+# print(content)
+# Email(content).sendViaMailtrap()
+Email(content).send()
