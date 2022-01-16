@@ -26,6 +26,11 @@ class Weather(ExternalApi):
             text = f"<p>{day['date']}: {day['text']}, {day['avg_temp']} grader och {day['precipitation']} mm nederbörd"
             html = html + text
 
+        smhiUrl = f"https://www.smhi.se/q/{self.city}"
+        link = f"<p><a url={smhiUrl}>Mer info</p></a>"
+
+        html = html + link
+
         return html
 
     def getForecast(self):
