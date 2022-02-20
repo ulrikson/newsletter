@@ -3,4 +3,4 @@ class TV:
         pass
 
     def getHtml(self):
-        return '<h2>TV idag</h2><p><a href="https://www.tvmatchen.nu/vinter-os/">OS-program</a></p>'
+        return '<h2>TV idag</h2><p><a href="https://www.tvmatchen.nu/">Sport på TV</a></p>'
