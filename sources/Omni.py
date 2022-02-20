@@ -25,9 +25,9 @@ class Omni(ExternalApi):
         for topic in topics:
             titleEncoded = urllib.parse.quote(topic["title"])
             url = "https://omni.se/sok?q=" + titleEncoded + "&tab=articles"
-            topic = f"<a href={url}>{topic['title']}</a>"
+            topic = f"<a href={url}>{topic['title']}</a><br />"
             topicsList.append(topic)
 
-        topicsText = ", ".join(topicsList)
+        topicsText = "".join(topicsList)
 
         return topicsText
