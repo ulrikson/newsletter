@@ -1,10 +1,15 @@
 import requests
 
 
-class Scraper:
-    def __init__(self, url, headers):
+class ExternalApi:
+    def __init__(self, url, headers={}, params={}):
         self.url = url
         self.headers = headers
+        self.params = params
+
+    def getJson(self):
+        response = requests.get(self.url, headers=self.headers, params=self.params)
+        return response.json()
 
     def getContent(self):
         response = requests.get(self.url, self.headers)
